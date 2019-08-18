@@ -13,14 +13,34 @@ export class Data extends Component {
     nonBigSpenderTotal: 0
   }
 
+  bigSpenderReturn (){
+    return this.state.bigSpenders
+  }
+
   componentDidMount() {
     axios.get("https://e2nkh9bvqg.execute-api.us-east-2.amazonaws.com/prod/visitorSampler?count=100",
     ).then(
       (result) => {
-        console.log(result)
+        console.log(result.data[0].audiences)
+        let bigSpender = 0
+        let nonBigSpender = 0
+        for(let i = 0; i < result.data.length; i++){
+         for(let j = 0; j < result.data[i].audiences.length; j++){
+           if(result.data[i].audiences[j] === "Big Spender"){
+              bigSpender++;
+           }
+           else{
+            nonBigSpender++; 
+           }
+         }
+        }
+        console.log(bigSpender)
         this.setState({
           isLoaded: true,
-          visitors: result.data
+          visitors: result.data,
+          bigSpender: bigSpender,
+          nonBigSpenders: nonBigSpender
+
         });
 
 
