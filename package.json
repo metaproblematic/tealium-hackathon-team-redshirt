@@ -1,0 +1,27 @@
+{
+  "name": "tealium-hackathon-team-redshirt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "node": "^12.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdorrity/tealium-hackathon-team-redshirt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdorrity/tealium-hackathon-team-redshirt/issues"
+  },
+  "homepage": "https://github.com/rdorrity/tealium-hackathon-team-redshirt#readme"
+}
